@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.util.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -39,19 +40,6 @@ public class Common{
     @Transient
     private String is_null;
 
-
-    /***<pre> office_name : 기관명 </pre> */
-    @Transient
-    private String office_name;
-
-    /***<pre> office_type : 기관유형 </pre> */
-    @Transient
-    private String office_type;
-
-    /***<pre> receipt_number : 신청서 리턴 번호 </pre> */
-    @Transient
-    private String receipt_number;
-    
     /***<pre> sort_id : 정렬 기준 ID </pre> */
     @Transient
     private String sort_id;
@@ -59,7 +47,6 @@ public class Common{
     /***<pre> sort_order : 정렬방법(asc, desc) </pre> */
     @Transient
     private String sort_order;
-
 
     @Transient
     private Date system_create_date;
