@@ -48,31 +48,6 @@ public class Common{
     @Transient
     private String sort_order;
 
-    @Transient
-    private Date system_create_date;
-    @Transient
-    private String system_create_userid;
-    @Transient
-    private Date system_update_date;
-    @Transient
-    private String system_update_userid;
-
-    /***<pre> system_create_date : 작성일자 </pre> */
-    @Transient
-    private java.sql.Date _system_create_date;
-
-    /***<pre> system_create_userid : 작성자ID </pre> */
-    @Transient
-    private String _system_create_userid;
-
-    /***<pre> system_update_date : 수정일자 </pre> */
-    @Transient
-    private java.sql.Date _system_update_date;
-
-    /***<pre> system_update_userid : 수정자ID </pre> */
-    @Transient
-    private String _system_update_userid;
-
     /***<pre> sort_id : 정렬 기준 ID </pre> */
     @Transient
     private String _sort_id;
