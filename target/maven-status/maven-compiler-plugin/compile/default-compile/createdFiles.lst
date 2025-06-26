@@ -45,6 +45,7 @@ com/system/auth/dto/SequenceResponse.class
 com/system/auth/authuser/AuthUser$AuthUserBuilderImpl.class
 com/system/common/annotation/SetHypen.class
 com/system/common/enumlist/AopDateToStringTransformFieldNameList.class
+com/system/common/util/pageredirect/PageRedirectController.class
 com/system/auth/authuser/AuthUser$AuthUserBuilder.class
 com/system/auth/dto/AuthenticationRequest$AuthenticationRequestBuilder.class
 com/system/auth/dto/RegisterRequest$RegisterRequestBuilderImpl.class
@@ -62,5 +63,6 @@ com/system/common/enumlist/AopSetDataValueTransformFieldNameList.class
 com/system/common/util/passwordvalidation/PasswordPolicy.class
 com/system/auth/authuser/AuthUserService.class
 com/system/auth/authuser/AuthUser.class
+com/system/common/util/message/MessageService.class
 com/system/common/util/passwordvalidation/PasswordValidationUtil.class
 com/system/auth/authuser/AuthUserController.class

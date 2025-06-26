@@ -1,6 +1,7 @@
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/auth/mapper/SequenceMapper.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/base/CommonMapper.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/config/LowerCaseMapTypeHandler.java
+/Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/util/pageredirect/PageRedirectController.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/config/ApplicationConfig.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/enumlist/AopIntegerToStringSetCommaFieldNameList.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/enumlist/AopDateToStringTransformFieldNameList.java
@@ -41,6 +42,7 @@
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/interceptor/QueryTypeInterceptor.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/auth/authuser/Role.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/util/vehiclenumber/CreateUniqueVehicleNumber.java
+/Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/util/message/MessageService.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/util/ApplicationResource.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/enumlist/AopSetDataValueTransformFieldNameList.java
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/com/system/common/base/CommonController.java

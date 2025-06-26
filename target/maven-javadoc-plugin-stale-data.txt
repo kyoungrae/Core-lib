@@ -34,8 +34,10 @@ com.system.auth.controller
 com.system.auth.service
 com.system.auth.domain
 com.system.common.util.passwordvalidation
+com.system.common.util.message
 com.system.common.util
 com.system.common.util.vehiclenumber
+com.system.common.util.pageredirect
 com.system.common.util.userinfo
 com.system.common.util.validation
 com.system.common.config
@@ -105,25 +107,25 @@ com.system.common.base
 /Users/ikyoungtae/.m2/repository/org/springframework/spring-webmvc/6.2.8/spring-webmvc-6.2.8.jar = 1749720472000
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java/.DS_Store = 1750748362310
 /Users/ikyoungtae/Documents/coding/Core-lib/src/main/java = 1750748613000
-/Users/ikyoungtae/Documents/coding/Core-lib/target/generated-sources/annotations = 1750748680752
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/tag-search-index.js = 1750748682853
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/overview-tree.html = 1750748682839
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/module-search-index.js = 1750748682852
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/index.html = 1750748682841
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/package-search-index.js = 1750748682852
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/jquery-ui.overrides.css = 1750748682868
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/serialized-form.html = 1750748682803
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/index-all.html = 1750748682862
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/allpackages-index.html = 1750748682852
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/member-search-index.js = 1750748682853
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/copy.svg = 1750748682865
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/script.js = 1750748682864
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/stylesheet.css = 1750748682864
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/search-page.js = 1750748682865
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/overview-summary.html = 1750748682863
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/help-doc.html = 1750748682863
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/element-list = 1750748682781
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/search.html = 1750748682862
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/allclasses-index.html = 1750748682851
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/type-search-index.js = 1750748682852
-/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/search.js = 1750748682865
+/Users/ikyoungtae/Documents/coding/Core-lib/target/generated-sources/annotations = 1750830542903
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/tag-search-index.js = 1750830544949
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/overview-tree.html = 1750830544938
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/module-search-index.js = 1750830544948
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/index.html = 1750830544939
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/package-search-index.js = 1750830544948
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/jquery-ui.overrides.css = 1750830544963
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/serialized-form.html = 1750830544906
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/index-all.html = 1750830544959
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/allpackages-index.html = 1750830544948
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/member-search-index.js = 1750830544948
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/copy.svg = 1750830544961
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/script.js = 1750830544961
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/stylesheet.css = 1750830544961
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/search-page.js = 1750830544962
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/overview-summary.html = 1750830544960
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/help-doc.html = 1750830544960
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/element-list = 1750830544881
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/search.html = 1750830544959
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/allclasses-index.html = 1750830544947
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/type-search-index.js = 1750830544948
+/Users/ikyoungtae/Documents/coding/Core-lib/target/apidocs/search.js = 1750830544962
