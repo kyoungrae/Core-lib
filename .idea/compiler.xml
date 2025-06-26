@@ -6,10 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core-lib (1)" />
+        <module name="static-util-lib" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="core-lib" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

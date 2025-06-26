@@ -1,7 +1,7 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!core-lib/src/main/**/target/
+!core-lib/src/test/**/target/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -28,8 +28,8 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+!core-lib/src/main/**/build/
+!core-lib/src/test/**/build/
 
 ### VS Code ###
 .vscode/
