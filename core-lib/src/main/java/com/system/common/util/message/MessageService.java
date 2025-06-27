@@ -125,7 +125,6 @@ public class MessageService {
                 String value = matcher.group(2);
                 localeMessages.put(key, value);
             }
-            System.out.println(localeMessages);
         } catch (IOException e) {
             e.printStackTrace();
         }
