@@ -62,7 +62,7 @@ public class MessageService {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.err.println("파일 경로가 없습니다");
+//            System.err.println("파일 경로가 없습니다");
         } catch (IOException e) {
             e.printStackTrace();
         }

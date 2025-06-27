@@ -37,7 +37,7 @@ public class QueryTypeInterceptor implements Interceptor {
         String sql = boundSql.getSql().toLowerCase().trim();
 //        System.out.println(boundSql.getParameterObject());
         if(boundSql.getParameterObject() != null){
-            logger.debug(boundSql.getParameterObject().toString());
+//            logger.debug(boundSql.getParameterObject().toString());
         }
         // Create system authUser ID
         UserInfo userInfo = new UserInfo();
