@@ -5,6 +5,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Component;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -39,8 +40,8 @@ public class MessageService {
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 
         // 두 경로에서 JS 파일 목록을 동적으로 추가
-        addJsFilesFromResources(jsFiles, resolver, "classpath:static/common/js/common/*.js");
-        addJsFilesFromResources(jsFiles, resolver, "classpath:static/common/js/message/*.js");
+        addJsFilesFromResources(jsFiles, resolver, "classpath:/static/common/js/common/*.js");
+        addJsFilesFromResources(jsFiles, resolver, "classpath:/static/common/js/message/*.js");
 
         return jsFiles;
     }
@@ -48,6 +49,11 @@ public class MessageService {
     // 리소스에서 JS 파일 목록 추가하는 함수
     private static void addJsFilesFromResources(List<String> jsFiles, PathMatchingResourcePatternResolver resolver, String path) {
         try {
+//            System.out.println("JS 파일 경로 탐색:");
+//            Resource[] resources1= resolver.getResources("classpath*:**/*.js");
+//            for (Resource r : resources1) {
+//                System.out.println(" - " + r.getURI());
+//            }
             Resource[] resources = resolver.getResources(path);
             for (Resource resource : resources) {
                 String fileName = resource.getFilename();
@@ -55,6 +61,8 @@ public class MessageService {
                     jsFiles.add(fileName.replace(".js", "")); // 확장자 제거 후 추가
                 }
             }
+        } catch (FileNotFoundException e) {
+            System.err.println("파일 경로가 없습니다");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -117,6 +125,7 @@ public class MessageService {
                 String value = matcher.group(2);
                 localeMessages.put(key, value);
             }
+            System.out.println(localeMessages);
         } catch (IOException e) {
             e.printStackTrace();
         }
