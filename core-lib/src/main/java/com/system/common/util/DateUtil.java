@@ -2,7 +2,9 @@ package com.system.common.util;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,14 +30,27 @@ public class DateUtil {
 
         return currentDate.format(formatter);
     }
-    public static Map<String, String> getServerTime() {
-        Map<String, String> response = new HashMap<>();
+    public static String getServerDateTypeString() {
+        String response = "";
         LocalDateTime now = LocalDateTime.now();
         String formattedTime = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         String[] a;
         a = formattedTime.split(" ");
-        response.put("serverDate", a[0]);
-        response.put("serverTime", a[1]);
+
+        response = a[0];
         return response;
+    }
+    public static String getServerTimeTypeString() {
+        String response = "";
+        LocalDateTime now = LocalDateTime.now();
+        String formattedTime = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        String[] a;
+        a = formattedTime.split(" ");
+
+        response = a[1];
+        return response;
+    }
+    public static Date getServerTimeTypeDate() {
+        return  Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
     }
 }

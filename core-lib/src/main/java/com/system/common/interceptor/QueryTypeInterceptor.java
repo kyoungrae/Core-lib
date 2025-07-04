@@ -3,7 +3,9 @@ package com.system.common.interceptor;
 import com.system.common.annotation.RemoveHypen;
 import com.system.common.annotation.StringToIntegerRemoveComma;
 import com.system.common.enumlist.InterCeptorRemoveDataValueTransformFieldNameList;
+import com.system.common.util.DateUtil;
 import com.system.common.util.userinfo.UserInfo;
+import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
@@ -17,6 +19,8 @@ import org.slf4j.LoggerFactory;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.sql.Connection;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -29,7 +33,6 @@ import java.util.Properties;
 })
 public class QueryTypeInterceptor implements Interceptor {
     private static final Logger logger = LoggerFactory.getLogger(QueryTypeInterceptor.class);
-
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
         StatementHandler statementHandler = (StatementHandler) invocation.getTarget();
@@ -40,8 +43,8 @@ public class QueryTypeInterceptor implements Interceptor {
 //            logger.debug(boundSql.getParameterObject().toString());
         }
         // Create system authUser ID
-        UserInfo userInfo = new UserInfo();
-        String userEmail = userInfo.getUserEmail();
+//        UserInfo userInfo = new UserInfo();
+        String userEmail = UserInfo.getUserEmail();
         if (sql.startsWith("select")) {
             Object parameterObject = boundSql.getParameterObject();
             if (parameterObject != null) {
@@ -52,7 +55,9 @@ public class QueryTypeInterceptor implements Interceptor {
             if (parameterObject != null) {
                 applyTransformations(parameterObject);
                 if(userEmail != null){
+                    Date systemDateTime = DateUtil.getServerTimeTypeDate();
                     modifyField(parameterObject, "system_create_userid", userEmail);
+                    modifyFieldDate(parameterObject, "system_create_date", systemDateTime);
                 }
             }
         } else if (sql.startsWith("update")) {
@@ -135,6 +140,21 @@ public class QueryTypeInterceptor implements Interceptor {
     }
 
     private void modifyField(Object obj, String fieldName, String value) {
+        try {
+            Field field = findField(obj.getClass(), fieldName);
+            if (field != null) {
+                field.setAccessible(true);
+                field.set(obj, value);
+            }
+        } catch (NoSuchFieldException e) {
+            // 필드가 존재하지 않을 경우의 처리
+//            System.err.println("Field '" + fieldName + "' not found: " + e.getMessage());
+        } catch (IllegalAccessException e) {
+            // 접근 예외 처리
+//            System.err.println("Error accessing field '" + fieldName + "': " + e.getMessage());
+        }
+    }
+    private void modifyFieldDate(Object obj, String fieldName, Date value) {
         try {
             Field field = findField(obj.getClass(), fieldName);
             if (field != null) {

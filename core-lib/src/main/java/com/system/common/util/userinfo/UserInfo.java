@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserInfo {
     JwtService jwtService;
-    public String getUserEmail() throws Exception{
+    public static String getUserEmail() throws Exception{
         try{
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             if (authentication != null && authentication.isAuthenticated()) {
