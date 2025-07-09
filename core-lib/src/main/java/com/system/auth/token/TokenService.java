@@ -17,4 +17,7 @@ public class TokenService {
     public int save(Token token){
         return tokenMapper.INSERT_TOKEN(token);
     }
+    public int update(Token token){
+        return tokenMapper.UPDATE_TOKEN(token);
+    }
 }

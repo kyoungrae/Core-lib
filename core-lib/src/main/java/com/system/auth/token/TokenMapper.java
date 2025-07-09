@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface TokenMapper {
     public Optional<Token> SELECT_TOKEN(String token);
     int INSERT_TOKEN(Token token);
+    int UPDATE_TOKEN(Token token);
 }
