@@ -4,6 +4,7 @@
 package com.system.auth.authuser;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -14,13 +15,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequiredArgsConstructor
 public class AuthUserService{
     private final AuthUserMapper authUserMapper;
-    private final Map<String, AuthUser> userCache = new ConcurrentHashMap<>();
-    public Optional<AuthUser> findByUserName(String req){
-        if (userCache.containsKey(req)) return Optional.of(userCache.get(req));
-        var user = AuthUser.builder().email(req).build();
-        var result = authUserMapper.SELECT_USER_INFO(user);
-        result.ifPresent(u -> userCache.put(req, u));
-        return result;
+
+    public Optional<AuthUser> findByUserName(String email) {
+        AuthUser user = AuthUser.builder().email(email).build();
+        return authUserMapper.SELECT_USER_INFO(user);
     }
     public int save(AuthUser authUser){
         return authUserMapper.INSERT_USER_INFO(authUser);
